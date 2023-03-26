@@ -1,16 +1,14 @@
 import { Button, Dropdown, Navbar } from "flowbite-react";
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Logo from "../assets/Logo.svg";
 
-const NavbarComponent = ({ handleButtonClick }) => {
+const NavbarComponent = () => {
   return (
     <div>
-      <Navbar fluid={true} rounded={true}>
-        <Navbar.Brand href="https://flowbite.com/">
-         
-          <span className="self-center text-3xl  whitespace-nowrap  font-semibold dark:text-white">
-            Ama<span className="text-yellow-400">z</span>on
-          </span>
+      <Navbar fluid={true} rounded={true} className="bg-black text-white">
+        <Navbar.Brand href="/">
+          <img src={Logo} className="mr-3 h-6 sm:h-9" alt="Amazon Logo" />
         </Navbar.Brand>
         <div className="flex md:order-2">
           <Button>Log in</Button>
@@ -22,16 +20,16 @@ const NavbarComponent = ({ handleButtonClick }) => {
           </Navbar.Link>
           <Navbar.Link>
             <Dropdown label="Category" inline={true}>
-              <Dropdown.Item onClick={() => handleButtonClick("all")}>
+              <Dropdown.Item >
                 All
               </Dropdown.Item>
-              <Dropdown.Item onClick={() => handleButtonClick("cloth")}>
+              <Dropdown.Item >
                 Cloth
               </Dropdown.Item>
-              <Dropdown.Item onClick={() => handleButtonClick("men")}>
+              <Dropdown.Item >
                 Men
               </Dropdown.Item>
-              <Dropdown.Item onClick={() => handleButtonClick("bottle")}>
+              <Dropdown.Item >
                 Bottle
               </Dropdown.Item>
             </Dropdown>

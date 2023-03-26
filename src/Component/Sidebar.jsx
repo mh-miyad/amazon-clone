@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Sidebar = ({count}) => {
+const Sidebar = () => {
   return (
     <div>
 
@@ -11,7 +11,7 @@ const Sidebar = ({count}) => {
                 Order Summary
                 </h4>
                 <p className='text-white border-2 text-2xl bg-black/20 shadow-lg shadow-black/50 rounded-xl border-white px-5 py-4'>Selected Items:
-                    <span className='text-2xl font-bold mx-10'>{count}</span>
+                    <span className='text-2xl font-bold mx-10'></span>
                 </p>
 
             </div>

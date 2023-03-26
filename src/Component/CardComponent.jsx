@@ -1,9 +1,9 @@
 import { Button, Card, Rating } from 'flowbite-react'
-import React, { useState } from 'react'
+import React from 'react'
 
-const CardComponent = ({cardtitle,cardImg,cardDescription,price,rating,onAddToCart}) => {
+const CardComponent = ({cardtitle,cardImg,cardDescription,price,rating}) => {
 
-  const [data ,setData] = useState(0)
+
      
   return (
     <div>
@@ -31,7 +31,7 @@ const CardComponent = ({cardtitle,cardImg,cardDescription,price,rating,onAddToCa
 </Rating>
     </div>
     <div className='flex  justify-around items-center'>
-      <Button color={'failure'} onClick={onAddToCart} > Add TO card </Button>
+      <Button color={'failure'}> Add TO card </Button>
       <Button color={'purple'}> Buy Now </Button>
     </div>
     
