@@ -6,12 +6,12 @@ import Logo from "../assets/Logo.svg";
 const NavbarComponent = () => {
   return (
     <div>
-      <Navbar fluid={true} rounded={true} className="bg-black text-white">
+      <Navbar fluid={true} rounded={true}>
         <Navbar.Brand href="/">
-          <img src={Logo} className="mr-3 h-6 sm:h-9" alt="Amazon Logo" />
+          <img src={Logo} className="mr-3 h-10 bg-black rounded-xl " alt="Amazon Logo" />
         </Navbar.Brand>
         <div className="flex md:order-2">
-          <Button>Log in</Button>
+          <Button color={'dark'}>Log in</Button>
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>

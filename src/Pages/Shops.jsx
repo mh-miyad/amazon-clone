@@ -8,11 +8,17 @@ const Shops = () => {
 
 
   const [cart, setCart] = useState([]);
+  const [cart1, setCart1] = useState([]);
   const eventHandlar =(id)=>{
     const newCart = [...cart,id]
-    setCart(newCart);
+    const newCart1 = [...cart,id]
+    newCart.map( ele =>  setCart(ele))
+    
+    setCart1(newCart1)
     
   }
+
+
 
  
   return (
@@ -35,8 +41,12 @@ const Shops = () => {
           ))}
       </div>
       <div className="order-1 md:order-2 ">
+        {
 
-        <Sidebar orderItem={cart.length}/>
+        <Sidebar orderItem={cart1.length} price={cart.price} charge={cart.charge}/>
+        }
+
+        
       </div>
           </div>
     </div>

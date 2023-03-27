@@ -8,7 +8,7 @@ const CardComponent = ({cardtitle,cardImg,cardDescription,price,rating,id,eventH
      
   return (
     <div>
-       <div className="my-10" style={{width :'18rem'}}>
+       <div className="my-10 mx-7" style={{width :'18rem'}}>
   <Card imgSrc={cardImg}>
     <h5 className="text-xl font-bold tracking-tighter text-gray-700 dark:text-white">
      {cardtitle}
