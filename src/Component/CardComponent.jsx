@@ -1,5 +1,6 @@
 import { Button, Card, Rating } from 'flowbite-react'
 import React from 'react'
+import { AiOutlineShoppingCart } from "react-icons/all";
 
 const CardComponent = ({cardtitle,cardImg,cardDescription,price,rating,id,eventHandlar}) => {
 
@@ -32,7 +33,7 @@ const CardComponent = ({cardtitle,cardImg,cardDescription,price,rating,id,eventH
 </Rating>
     </div>
     <div className='flex  justify-around items-center'>
-      <Button color={'failure'} onClick={()=>eventHandlar(id)}> Add To card </Button>
+      <Button size={'sm'} color={'failure'} onClick={()=>eventHandlar(id)}> <AiOutlineShoppingCart className='mr-1'/> Add To card </Button>
       <Button color={'purple'}> Buy Now </Button>
     </div>
     
