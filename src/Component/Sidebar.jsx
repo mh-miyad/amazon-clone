@@ -1,14 +1,17 @@
 import { Button } from "flowbite-react";
 import React from "react";
 
-const Sidebar = ({ charge ,item}) => {
+const Sidebar = ({ charge}) => {
   let grandTotal = 0;
   let total = 0;
   let shipping =  0;
+  let quantity =0;
   for (const product of charge) {
-    total = total + product.price;
-    shipping = shipping + product.shipping;
+    product.quantity =  product.quantity || 1;
+    total = total + (product.price * product.quantity);
+    shipping = shipping + (product.shipping);
      grandTotal  = total + (total * 0.05);
+     quantity = quantity + product.quantity;
   }
   return (
     <div className="my-10 sticky top-5">
@@ -19,7 +22,7 @@ const Sidebar = ({ charge ,item}) => {
           </h4>
           <p className="text-white border-2 text-2xl bg-black/20 shadow-lg shadow-black/50 rounded-xl border-white px-3  py-2 my-5">
             Selected Items:
-            <span className="text-2xl font-bold mx-10">{item}</span>
+            <span className="text-2xl font-bold mx-10">{quantity}</span>
           </p>
           <p className="text-white border-2 text-2xl bg-black/20 shadow-lg shadow-black/50 rounded-xl border-white px-3  py-2 my-5">
             Total Price:
@@ -33,8 +36,8 @@ const Sidebar = ({ charge ,item}) => {
             <span className="text-2xl font-bold mx-10">{shipping}</span>
           </p>
           <p className="text-white border-2 text-2xl bg-black/20 shadow-lg shadow-black/50 rounded-xl border-white px-3  py-2 my-5">
-            Grand Total:
-            <span className="text-2xl font-bold mx-10">{grandTotal.toFixed()}</span>
+            Grand Total: 
+            <span className="text-2xl font-bold mx-10">${grandTotal.toFixed()}</span>
           </p>
           <div className="flex justify-around">
             <Button color={'failure'} className='shadow-2xl shadow-black/30'> Remove Item</Button>
