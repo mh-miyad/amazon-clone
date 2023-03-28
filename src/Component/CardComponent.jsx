@@ -2,7 +2,7 @@ import { Button, Card, Rating } from 'flowbite-react'
 import React from 'react'
 import { AiOutlineShoppingCart } from "react-icons/all";
 
-const CardComponent = ({cardtitle,cardImg,cardDescription,price,rating,id,eventHandlar}) => {
+const CardComponent = ({cardtitle,cardImg,cardDescription,price,rating,id,reviwe,eventHandlar}) => {
 
  
 
@@ -30,6 +30,12 @@ const CardComponent = ({cardtitle,cardImg,cardDescription,price,rating,id,eventH
   <p className="ml-2 text-sm font-medium text-gray-500 dark:text-gray-400">
     {rating} out of 5
   </p>
+  <a
+  
+    className="text-sm font-medium ml-2 text-gray-900 underline hover:no-underline dark:text-white"
+  >
+    {reviwe} reviews
+  </a>
 </Rating>
     </div>
     <div className='flex  justify-around items-center'>
