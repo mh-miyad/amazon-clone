@@ -39,7 +39,7 @@ const CardComponent = ({cardtitle,cardImg,cardDescription,price,rating,id,reviwe
 </Rating>
     </div>
     <div className='flex  justify-around items-center'>
-      <Button size={'sm'} color={'failure'} onClick={()=>eventHandlar(id)}> <AiOutlineShoppingCart className='mr-1'/> Add To card </Button>
+      <Button  color={'failure'} onClick={()=>eventHandlar(id)}> <AiOutlineShoppingCart className='mr-1'/> Add To card </Button>
       <Button color={'purple'}> Buy Now </Button>
     </div>
     
